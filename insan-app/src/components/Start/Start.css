@@ -1,0 +1,91 @@
+.Start{
+    padding: 2rem;
+    margin-bottom: var(--margin-section);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    position: relative;
+}
+.start-blur{
+    width: 20rem;
+    height: 11rem;
+    top: 50%;
+    right: 0;
+}
+.Start .start-content{
+    flex: 1;
+}
+.Start .start-content>:nth-child(1){
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.Start .start-content>:nth-child(2){
+ display: block;
+ color: var(--secondary-white);
+ margin-bottom: 5px;
+}
+.Start .start-content>:nth-child(3){
+    display: block;
+    color: var(--secondary-white);
+   }
+   .Start .start-content .btn{
+    margin: 1rem;
+    width: fit-content;
+    position: relative;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: .3s;
+   }
+   .Start .start-content .btn:hover{
+    transform: scale(1.1);
+   }
+   .Start .start-content .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 14px;
+    border: 1.5px solid transparent;
+    background: linear-gradient(180deg,rgba(180, 112, 255, 1),rgba(255, 54, 143, 1)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+   }
+   .Start .start-content .btn button{
+    padding: 1rem;
+    border: none;
+    border-radius: 14px;
+    color: var(--white-color);
+    font-weight: bold;
+    background: linear-gradient(180deg, #372763 0%, #0f0723 100%);
+
+   }
+.Start .start-image{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.Start .start-image>img{
+    width: 18rem;
+    height: auto;
+}
+/* =================== media ================ */
+@media screen and (max-width:760px) {
+    .Start .start-content{
+        min-width: fit-content;
+        text-align: center;
+    }
+    .Start .start-content .btn{
+        margin: 1rem auto;
+    }
+    .Start .start-image{
+        justify-content: center;
+    }
+    .start-blur {
+        width: 14rem;
+    }
+}

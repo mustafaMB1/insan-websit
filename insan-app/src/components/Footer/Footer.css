@@ -1,0 +1,93 @@
+.Footer{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
+    color: var(--white-color);
+    background: linear-gradient(154.57deg, #40306b 16.98%, #2a1a54 177.06%);
+    box-shadow: 0px 0px 3px white;
+}
+.Footer>:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+.Footer>:nth-child(1)>:nth-child(1){
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.Footer>:nth-child(1)>:nth-child(1)>h3{
+    text-transform: uppercase;
+}
+.Footer>:nth-child(1)>:nth-child(1)>img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+
+}
+.Footer>:nth-child(1)>:nth-child(2){
+    color: var(--secondary-white);
+}
+.Footer>:nth-child(1)>:nth-child(3){
+    color: var(--secondary-white);
+}
+.Footer>:nth-child(2)>ul,
+.Footer>:nth-child(3)>ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.Footer>:nth-child(2)>ul>:nth-child(1),
+.Footer>:nth-child(3)>ul>:nth-child(1){
+    text-transform: uppercase;
+}
+.Footer>:nth-child(2)>ul>:not(:nth-child(1)),
+.Footer>:nth-child(3)>ul>:not(:nth-child(1)){
+    margin-bottom: 10px;
+}
+.Footer>:nth-child(2)>ul>li>a,
+.Footer>:nth-child(3)>ul>li>a{
+    color: var(--secondary-white);
+    transition: .3s;
+}
+.Footer>:nth-child(2)>ul>li>a:hover,
+.Footer>:nth-child(3)>ul>li>a:hover{
+    color: var(--primary-color);
+}
+.Footer>:nth-child(4){
+    display: flex;
+    flex-direction: column;
+}
+.Footer>:nth-child(4)>:nth-child(1){
+    text-transform: uppercase;
+}
+.Footer>:nth-child(4)>:nth-child(2){
+    display: flex;
+}
+.Footer>:nth-child(4)>:nth-child(2)>img{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.Footer>:nth-child(4)>:nth-child(2)>img:hover{
+    transform: translateY(-2px);
+}
+/* ======================= media ======================== */
+@media screen and (max-width:760px) {
+    .Footer{
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    .Footer>div{
+        text-align: center;
+    }
+    .Footer>:nth-child(2)>ul,
+    .Footer>:nth-child(3)>ul{
+    padding: initial;
+    }
+}

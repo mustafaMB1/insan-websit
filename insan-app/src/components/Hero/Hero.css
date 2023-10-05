@@ -1,0 +1,215 @@
+.Hero{
+    position: relative;
+    margin-top: var(--margin-section);
+    margin-bottom: var(--margin-section);
+    color: var(--white-color);
+    padding: 2rem;
+    display: flex;
+    gap: 5rem;
+}
+.hero-l{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+.hero-l .text{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    color: var(--white-color);
+}
+.hero-blur{
+    width: 20rem;
+    height: 16rem;
+    top: 8rem;
+    left: 0;
+    right: 0;
+}
+.hero-l .text span{
+    display: block;
+
+}
+.hero-l .text span:nth-child(1){
+    color: var(--secondary-white);
+    font-size: 1rem;
+    font-weight: normal;
+    display: flex;
+    gap: 10px;
+}
+.hero-l .text span:nth-child(2),
+.hero-l .text span:nth-child(3),
+.hero-l .text span:nth-child(5){
+    font-size: 4rem;
+    font-weight: bold;
+}
+.hero-l .text span:nth-child(4)>img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.hero-l .text span:nth-child(6){
+    max-width: 60%;
+    line-height: 2;
+    font-size: 20px;
+    word-spacing: 3px;
+    color: var(--secondary-white);
+    font-weight: normal;
+}
+.hero-l .text span:nth-child(7){
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.hero-l .buttons{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.hero-l .buttons button{
+    padding: 1rem;
+    border-radius: 16px;
+    border: none;
+    color: white;
+    background: linear-gradient(176.82deg, #b470ff -17.42%, #ff368f 153.52%);
+    font-weight: bold;
+    cursor: pointer;
+}
+.hero-l .buttons .insanplay{
+    position: relative;
+    background: linear-gradient(180deg, #372763 0%, #0f0723 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+}
+.hero-l .buttons .insanplay>:nth-child(1){
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.hero-l .buttons .insanplay::before{
+    content: "";
+    inset: 0px;
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid transparent;
+    background: linear-gradient(rgb(180, 112, 255), rgb(255, 54, 143)) border-box border-box;
+    -webkit-mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) padding-box padding-box, linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
+    -webkit-mask-composite: destination-out;
+}
+.hero-l .buttons>:nth-child(3){
+    font-size: 1.5rem;
+}
+.hero-r{
+    flex: 1;
+}
+.image{
+    position: relative;
+    width: fit-content;
+    height: auto;
+}
+.hero-r .image img{
+    width: 18rem;
+    height: auto;
+    border-radius: 16px;
+}
+.hero-r .image::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(25deg,rgb(180, 112, 255),#530987);
+    z-index: -1;
+    border-radius: 16px;
+    transform: rotate(5deg) translate(60px, 5px);
+}
+/* ====================== media ================== */
+@media screen and (max-width:1024px){
+    .Hero{
+        flex-direction: column;
+    }
+    .hero-r{
+        display: flex;
+        justify-content: center;
+    }
+    .hero-l .text span:nth-child(7){
+        display: none;
+    }
+}
+@media screen and (max-width:760px) {
+    .hero-blur {
+        width: 15rem;
+    }
+    .Hero{
+        flex-direction: column;
+        text-align: center;
+    }
+    .Hero .hero-l{
+        text-align: center;
+        align-items: center;
+    }
+    .hero-l .text span:nth-child(1){
+        display: block;
+    }
+    .hero-l .text span:nth-child(6){
+        margin: 10px auto;
+    }
+    .hero-l .text span:nth-child(2),
+    .hero-l .text span:nth-child(3),
+    .hero-l .text span:nth-child(5){
+    font-size: 2rem;
+   }
+   .hero-l .text span:nth-child(6){
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 80%;
+   }
+   .hero-l .buttons button{
+    padding: .5rem;
+   }
+   .hero-l .buttons .insanplay>:nth-child(1){
+    width: 1.5rem;
+    height: 1.5rem;
+   }
+   .hero-l .buttons>:nth-child(3) {
+    font-size: 1rem;
+  }
+  .hero-l .text span:nth-child(7) {
+    display: block;
+    top: -5%;
+    right: 12%;
+    width: 1rem;
+    height: 1rem;
+}
+  .hero-r{
+    display: flex;
+    justify-content: center;
+  }
+  .hero-r .image img {
+    width: 13rem;
+  }
+  .hero-r .image::before{
+    transform: rotate(5deg) translate(30px, 4px);
+  }
+}
+@media screen and (max-width:450px){
+    .hero-l .text span:nth-child(2),
+    .hero-l .text span:nth-child(3),
+    .hero-l .text span:nth-child(5){
+    font-size: 1.5rem;
+   }
+   .hero-l .buttons button{
+     font: 12px;
+   }
+   .hero-l .buttons>:nth-child(3) {
+    font-size: .8rem;
+  }
+   .hero-r .image img {
+    width: 9rem;
+  }
+}
+

@@ -1,0 +1,183 @@
+.Signup{
+    color: var(--white-color);
+    background: linear-gradient(45deg, black, transparent);
+    background-size: cover;
+    padding: 4rem;
+    display: flex;
+    color: var(--white-color);
+    height: fit-content;
+    height: 100vh;
+    align-items: center;
+}
+.sign-l{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #2b0e3aa1;
+    z-index: 1;
+}
+.sign-l>:nth-child(1){
+    letter-spacing: 3px;
+    font-family: cursive;
+}
+.sign-l>:nth-child(2){
+    max-width: 40%;
+    font-weight: normal;
+    line-height: 2;
+    text-align: center;
+}
+.sign-l>:nth-child(3){
+    margin: 1rem auto;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 14px;
+    border: navajowhite;
+    color: rgb(252 251 255 / 94%);
+    background: linear-gradient(180deg, #372763 0%, #0f0723 100%);    font-weight: bold;
+    font-family: revert;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3sec;
+    position: relative;
+}
+.sign-l>:nth-child(3)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 14px;
+    border: 1.5px solid transparent;
+    background: linear-gradient(180deg,rgba(180, 112, 255, 1),rgba(255, 54, 143, 1)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+}
+.sign-l>:nth-child(3):hover{
+ transform: scale(1.1); 
+}
+.sign-r{
+    flex: 1;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+.sign-r>:nth-child(1){
+    letter-spacing: 3px;
+    font-family: cursive;
+}
+.sign-r>:nth-child(2){
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.sign-r>:nth-child(2)>img{
+    padding: 6px;
+    border-radius: 50%;
+    background-color: var(--secondary-white);
+    cursor: pointer;
+    transition: .3s;
+}
+.sign-r>:nth-child(2)>img:hover{
+    transform: scale(1.1) translateY(-2px);
+    background-color: var(--white-color);
+}
+.sign-r>:nth-child(3){
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+.sign-r>:nth-child(4){
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.sign-r>:nth-child(4)>:not(:nth-last-child(1)){
+    text-align: center;
+    background-color: transparent;
+    border: navajowhite;
+    outline: none;
+    border-bottom: 1px solid var(--secondary-white);
+    color: white;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 12px;
+    padding: 10px;
+}
+.sign-r>:nth-child(4)>input::placeholder{
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+.sign-r>:nth-child(4)>:not(:nth-last-child(1)):focus{
+    background-color: var(--secondary-white);
+}
+.sign-r>:nth-child(4)>:nth-last-child(1){
+    width: fit-content;
+    padding: 7px;
+    border-radius: 14px;
+    border: navajowhite;
+    margin: 0 auto;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.sign-r>:nth-child(4)>:nth-last-child(1):hover{
+    color: var(--white-color);
+    background: linear-gradient(180deg, #372763 0%, #0f0723 100%);    font-weight: bold;
+}
+
+/* ========================= media =================== */
+@media screen and (max-width:760px) {
+    .Signup{
+        flex-direction: column;
+        padding: 0;
+    }
+    .sign-r{
+        gap: 1rem;
+    }
+    .sign-r>:nth-child(4){
+        gap: 1rem;
+    }
+}
+@media screen and (max-width:450px) {
+    .sign-l>:nth-child(1),
+    .sign-r>:nth-child(1){
+        letter-spacing: 0;
+    }
+    .sign-l>:nth-child(2) {
+        max-width: 60%;
+        margin: -7px;
+    }
+    .sign-r {
+        gap: 2px;
+        margin-bottom: 6rem;
+    }
+    .sign-l>:nth-child(3) {
+        font-size: 1rem;
+        margin: 10px auto;
+    }
+    .sign-l>:nth-child(1), .sign-r>:nth-child(1) {
+        letter-spacing: 0;
+        font-size: 1.5rem;
+        margin: 5px auto;
+    }
+}

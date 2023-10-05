@@ -1,0 +1,31 @@
+:root{
+  --primary-color:rgb(39 26 67);
+  --white-color:rgb(249 248 253);
+  --secondary-color:#261849;
+  --margin-section:120px;
+  --padding-section:1rem;
+  --secondary-white:#ebe4fb85;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--primary-color);
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+.blur{
+  background:rgb(255 25 103);
+  filter: blur(16rem);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -10;
+}
